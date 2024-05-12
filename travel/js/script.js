@@ -37,12 +37,12 @@ const form = document.getElementById('contactForm');
 form.addEventListener('submit', function (event) {
   event.preventDefault(); // Prevent default form submission
   (() => {
-    emailjs.init("6rxVUGlsg0RIbPbtm")
+    emailjs.init("WwuTIb4eI6Pzw0xa8")
   })()
   // Form validation
   const emailInput = document.getElementById('emailInput').value;
   const messageInput = document.getElementById('messageInput').value;
-  const emailPerusahaan = "gilangaldiano05@gmail.com"
+  const emailPerusahaan = "bintangjaya8382@gmail.com"
   const subjek = "Subject"
   const replyTo = "noreply@gmail.com"
 
@@ -51,7 +51,6 @@ form.addEventListener('submit', function (event) {
     return; // Exit the function if form is empty
   }
 
-  const body = `From: ${emailInput} \nPesan: ${messageInput}`; // Improved formatting
   console.log(emailInput, messageInput);
 
   let data = {
@@ -62,8 +61,8 @@ form.addEventListener('submit', function (event) {
     message: messageInput,
   }
 
-  let serviceID = "service_48fh0ni"
-  let template = "template_vc9i0f9"
+  let serviceID = "service_s31wfje"
+  let template = "template_s6ki64q"
 
   emailjs.send(serviceID, template, data)
     .then((msg) => {
@@ -78,6 +77,7 @@ form.addEventListener('submit', function (event) {
         icon: "error",
         button: "Oke",
       });
+      console.log(error);
     }
     )
 
