@@ -1,6 +1,5 @@
 const navbar = document.getElementsByTagName('nav')[0];
 window.addEventListener('scroll', function () {
-  console.log(window.scrollY);
   if (window.scrollY > 1) {
     navbar.classList.replace('bg-transparent', 'nav-color');
   } else if (this.window.scrollY <= 0) {
@@ -12,7 +11,7 @@ window.addEventListener('scroll', function () {
 
 var splide = new Splide(".splide", {
   type: "loop",
-  perPage: 3,
+  perPage: 2,
   perMove: 1,
   rewind: true,
   breakpoints: {
@@ -31,20 +30,53 @@ var splide = new Splide(".splide", {
 
 splide.mount()
 // function send mail
-function sendEmail() {
-  const emailInput = document.getElementById('emailInput');
-  const messageInput = document.getElementById('messageInput');
+const form = document.getElementById('contactForm');
 
-  Email.send({
-    Host: "smtp.gmail.com",
-    Username: "sender@email_address.com",
-    Password: "Enter your password",
-    To: 'receiver@email_address.com',
-    From: emailInput,
-    Subject: "Website Travel Pangandaran",
-    Body: messageInput,
-  })
+form.addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent default form submission
+  (() => {
+    emailjs.init("6rxVUGlsg0RIbPbtm")
+  })()
+  // Form validation
+  const emailInput = document.getElementById('emailInput').value;
+  const messageInput = document.getElementById('messageInput').value;
+  const emailPerusahaan = "gilangaldiano05@gmail.com"
+  const subjek = "Subject"
+  const replyTo = "noreply@gmail.com"
+
+  if (emailInput === '' || messageInput === '') {
+    alert('Please fill in both email and message fields.');
+    return; // Exit the function if form is empty
+  }
+
+  const body = `From: ${emailInput} \nPesan: ${messageInput}`; // Improved formatting
+  console.log(emailInput, messageInput);
+
+  let data = {
+    emailName: emailInput,
+    to: emailPerusahaan,
+    subject: subjek,
+    reply_to: replyTo,
+    message: messageInput,
+  }
+
+  let serviceID = "service_48fh0ni"
+  let template = "template_vc9i0f9"
+
+  emailjs.send(serviceID, template, data)
     .then((msg) => {
-      alert(msg)
-    })
-}
+      swal({
+        title: "Email berhasil Terkirim",
+        icon: "success",
+        button: "Oke",
+      });
+    }).catch((error) => {
+      swal({
+        title: "Email gagal Terkirim",
+        icon: "error",
+        button: "Oke",
+      });
+    }
+    )
+
+});
