@@ -1,3 +1,5 @@
+AOS.init()
+
 const navbar = document.getElementsByTagName('nav')[0];
 window.addEventListener('scroll', function () {
   if (window.scrollY > 1) {
