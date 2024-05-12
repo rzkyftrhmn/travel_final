@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  font-family: 'poppins', sans-serif;
+}
+body{
+  background-color: #e7e7e7;
+}
+.carousel-img-size {
+  height: 100vh;
+}
+ 
+/* navbar */
+.nav-color{
+  background-color: #6d0101;
+  transition: all ease-in-out 0.3s;
+}
+
+.bg-transparent{
+  transition: all ease-in 0.3s;
+}
+
+.navbar-brand{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c2c2c2;
+  font-style: italic;
+}
+
+.navbar-brand span{
+  color: #bb0000;
+}
+
+/* hero */
+.hero {
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Home */
+.a-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #c80000;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid transparent; /* border transparan saat tidak di-hover */
+  border-radius: 5px;
+  animation: gradientShift 3s linear infinite; /* animasi degradasi warna bingkai */
+}
+
+.a-button:hover {
+  background-color: #6d01013b;
+  border-color: #ff0000; /* warna bingkai menjadi merah saat di-hover */
+  color: #fff;
+  animation: none; /* menghentikan animasi saat di-hover */
+}
+
+@keyframes gradientShift {
+  0% {
+    border-color: #9e0000; /* warna bingkai awal */
+  }
+  50% {
+    border-color: #979797; /* warna bingkai tengah */
+  }
+  100% {
+    border-color: #6b6b6b; /* warna bingkai akhir */
+  }
+}
+
+
+/* layanan section */
+
+#layanan{
+  padding: 100px 0;
+}
+
+h2{
+  font-size: 48px;
+  font-weight: 500;
+  color: #9b0000;
+}
+
+.sub-title{
+  font-size: 18px;
+  color: #000;
+}
+
+.card-layanan{
+  width: 100%;
+  height: 313px;
+  border-radius: 5px;
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+  transition: all .2s ease-in;
+}
+
+.circle-icon{
+  width: 70px;
+  height: 70px;
+  background-color: #92929257;
+  border-radius: 50%;
+  transition: all .1s ease-in;
+}
+
+.card-layanan h3{
+  color: #9b0000;
+  font-size: 24px;
+  transition: all .2s ease-in;
+}
+
+.card-layanan p{
+  color: #000;
+  font-size: 14px;
+  transition: all .3s ease-in;
+}
+
+.card-layanan:hover{
+  width: 100%;
+  height: 313px;
+  border-radius: 5px;
+  background: linear-gradient(160deg, #9b0000, #000);
+  padding: 40px;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+  transition: all .2s ease-in;
+}
+
+.card-layanan:hover .circle-icon{
+  background-color: #fff;
+  transition: all .1s ease-in;
+}
+
+.card-layanan:hover h3{
+  color: #fff;
+  font-size: 24px;
+  transition: all .2s ease-in;
+}
+
+.card-layanan:hover p{
+  color: #fff;
+  font-size: 14px;
+  transition: all .3s ease-in;
+}
+
+/* armada */
+.splide__slide img {
+      width: 100%; /* Sesuaikan dengan lebar slide */
+      height: auto;
+      margin-right: 10px; /* Tambahkan margin antara gambar */
+  }
+
+.image-armada {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  object-fit: contain;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.btn-floating {
+    position: fixed;
+    right: 25px;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: 0;
+    z-index: 9999;
+    color: white;
+    transition: .2s;
+}
+
+.btn-floating:hover {
+    width: auto;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.btn-floating span {
+    font-size: 16px;
+    margin-left: 5px;
+    transition: .2s;
+    line-height: 0px;
+    display: none;
+}
+
+.btn-floating:hover span {
+    display: inline-block;
+}
+
+.btn-floating:hover img {
+    margin-bottom: 100px;
+}
+
+.btn-floating.whatsapp {
+    bottom: 25px;
+    background-color: #34af23;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    box-shadow: 5px 10px 8px #888888;
+  }
+
+.btn-floating.whatsapp:hover {
+  background-color: #1f7a12;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  box-shadow: 5px 10px 8px #000000;
+}
+
+.btn-floating.facebook {
+  bottom: 85px;
+  background-color: #1876f3;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  box-shadow: 5px 10px 8px #888888;
+}
+/* rute */
+.card-rute{
+  width: 50%;
+  height: 350px;
+  background: #fff;
+  box-shadow: 10px 10px 8px 10px #9e9e9e75;
+}
+
+h4{
+  color: #6d0101;
+}
+
+.content-rute{
+  width: 100%;
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 5px 10px 8px #888888;
+}
+.image-rute {
+  width: 100%;
+  height: 100%;
+}
+
+.bouncing-text {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  animation: bouncing 1s infinite;
+  display: inline-block;
+  animation-fill-mode: both;
+}
+
+@keyframes bouncing {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Delay each letter */
+.bouncing-text:nth-child(1) { animation-delay: calc(0.1s * 1); }
+.bouncing-text:nth-child(2) { animation-delay: calc(0.1s * 2); }
+.bouncing-text:nth-child(3) { animation-delay: calc(0.1s * 3); }
+.bouncing-text:nth-child(4) { animation-delay: calc(0.1s * 4); }
+.bouncing-text:nth-child(5) { animation-delay: calc(0.1s * 5); }
+.bouncing-text:nth-child(6) { animation-delay: calc(0.1s * 6); }
+.bouncing-text:nth-child(7) { animation-delay: calc(0.1s * 7); }
+.bouncing-text:nth-child(8) { animation-delay: calc(0.1s * 8); }
+.bouncing-text:nth-child(9) { animation-delay: calc(0.1s * 9); }
+.bouncing-text:nth-child(10) { animation-delay: calc(0.1s * 10); }
+.bouncing-text:nth-child(11) { animation-delay: calc(0.1s * 11); }
+.bouncing-text:nth-child(12) { animation-delay: calc(0.1s * 12); }
+.bouncing-text:nth-child(13) { animation-delay: calc(0.1s * 13); }
+.bouncing-text:nth-child(14) { animation-delay: calc(0.1s * 14); }
+.bouncing-text:nth-child(15) { animation-delay: calc(0.1s * 15); }
+.bouncing-text:nth-child(16) { animation-delay: calc(0.1s * 16); }
+.bouncing-text:nth-child(17) { animation-delay: calc(0.1s * 17); }
+.bouncing-text:nth-child(18) { animation-delay: calc(0.1s * 18); }
+.bouncing-text:nth-child(19) { animation-delay: calc(0.1s * 19); }
+.bouncing-text:nth-child(20) { animation-delay: calc(0.1s * 20); }
+.bouncing-text:nth-child(21) { animation-delay: calc(0.1s * 21); }
+.bouncing-text:nth-child(22) { animation-delay: calc(0.1s * 22); }
+.bouncing-text:nth-child(23) { animation-delay: calc(0.1s * 23); }
+.bouncing-text:nth-child(24) { animation-delay: calc(0.1s * 24); }
+.bouncing-text:nth-child(25) { animation-delay: calc(0.1s * 25); }
+.bouncing-text:nth-child(26) { animation-delay: calc(0.1s * 26); }
+.bouncing-text:nth-child(27) { animation-delay: calc(0.1s * 27); }
+.bouncing-text:nth-child(28) { animation-delay: calc(0.1s * 28); }
+.bouncing-text:nth-child(29) { animation-delay: calc(0.1s * 29); }
+.bouncing-text:nth-child(30) { animation-delay: calc(0.1s * 30); }
+.bouncing-text:nth-child(31) { animation-delay: calc(0.1s * 31); }
+.bouncing-text:nth-child(32) { animation-delay: calc(0.1s * 32); }
+.bouncing-text:nth-child(33) { animation-delay: calc(0.1s * 33); }
+
+
+@media screen and (max-width: 922px) {
+  .footer .social-links {
+    margin-right: 50px;
+  }
+  .bouncing-text{
+    font-size: 36px;
+  }
+  .sub-title{
+    font-size: 15px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  .card-layanan h3{
+    font-size: 19px;
+  }
+  .card-layanan:hover h3{
+    font-size: 19px;
+  }
+  .card-layanan p{
+    font-size: 14px;
+  }
+  .card-layanan:hover p{
+    font-size: 14px;
+    font-weight: 400;
+  }
+  #armada h1{
+    font-size: 30px;
+  }
+  #armada p{
+    font-size: 14px;
+    text-align: center;
+  }
+  #rute h1{
+    font-size: 27px;
+  }
+  .card-rute{
+    height: 280px;
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .bouncing-text{
+    font-size: 27px;
+  }
+  .sub-title{
+    font-size: 15px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  .card-layanan h3{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .card-layanan:hover h3{
+    font-size: 20px;
+  }
+  .card-layanan p{
+    font-size: 14px;
+    font-weight: 450;
+  }
+  .card-layanan:hover p{
+    font-size: 14px;
+    font-weight: 450;
+  }
+  .image-armada{
+    width: 80%;
+    margin-left: 23px;
+  }
+  #armada h1{
+    font-size: 28px;
+  }
+  #armada p{
+    font-size: 14px;
+    text-align: center;
+  }
+  .card-rute{
+    height: 200px;
+    width: 80%;
+  }
+  .navbar-brand{
+    font-size: 1.2rem;
+  }
+  .content-rute h4{
+    font-size: 20px;
+  }
+  .content-rute li{
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+
